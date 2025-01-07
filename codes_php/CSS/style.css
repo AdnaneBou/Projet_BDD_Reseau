@@ -1,0 +1,654 @@
+/*====================STYLE GENERAL=============*/
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fdfdf8;
+}
+
+main {
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+.center_index {
+    text-align: center;
+}
+
+/*=================================================*/
+/*==========================================*/
+.figure {
+    margin: 0;
+    position: relative;
+    z-index: 0;
+}
+
+.figure img {
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+    filter: blur(3px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+
+}
+
+.figure:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #000000;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.figcaption {
+    display: none;
+}
+
+/*=================================================*/
+/*=========================================*/
+.alignement1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+    top: 45%;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.alignement2 {
+    position: absolute;
+    left: 47%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+    top: 75%;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+
+}
+
+
+
+/*=================================================*/
+/*====================TEXT=======================*/
+h1 {
+    font-size: 60px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 42px;
+    text-align: center;
+    margin: 30px;
+}
+
+h3 {
+    font-size: 36px;
+    text-align: center;
+    margin: 25px;
+}
+
+.IP {
+    font-size: 20px;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+
+/*=================================================*/
+/*=====================HEADER=====================*/
+header {
+    background-color: #84a4fc;
+}
+
+/*====searchbar====*/
+button,
+input {
+    font: 1em Hind, sans-serif;
+    line-height: 1.5em;
+}
+
+
+input {
+    color: #9999ff;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input,
+.search-btn,
+.search-btn:before,
+.search-btn:after {
+    transition: all 0.25s ease-out;
+}
+
+.search-bar input,
+.search-btn {
+    width: 3em;
+    height: 3em;
+}
+
+.search-bar input:invalid:not(:focus),
+.search-btn {
+    cursor: pointer;
+}
+
+.search-bar,
+.search-bar input:focus,
+.search-bar input:valid {
+    width: 100%;
+}
+
+.search-bar input:focus,
+.search-bar input:not(:focus)+.search-btn:focus {
+    outline: transparent;
+}
+
+.search-bar {
+    margin: auto;
+    padding: 1.5em;
+    justify-content: center;
+    max-width: 30em;
+}
+
+.search-bar input {
+    background: transparent;
+    border-radius: 1.5em;
+    box-shadow: 0 0 0 0.4em #171717 inset;
+    padding: 0.75em;
+    transform: translate(0.5em, 0.5em) scale(0.5);
+    transform-origin: 100% 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.search-bar input::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+.search-bar input:focus,
+.search-bar input:valid {
+    background: #000066;
+    border-radius: 0.375em 0 0 0.375em;
+    box-shadow: 0 0 0 0.1em #1919ff inset;
+    transform: scale(1);
+}
+
+.search-btn {
+    background: #171717;
+    border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
+    padding: 0.75em;
+    position: relative;
+    transform: translate(0.25em, 0.25em) rotate(45deg) scale(0.25, 0.125);
+    transform-origin: 0 50%;
+}
+
+.search-btn:before,
+.search-btn:after {
+    content: "";
+    display: block;
+    opacity: 0;
+    position: absolute;
+}
+
+.search-btn:before {
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.2em #d3d3d3 inset;
+    top: 0.5em;
+    left: 0.5em;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.search-btn:after {
+    background: #bebebe;
+    border-radius: 0 0.25em 0.25em 0;
+    top: 51%;
+    left: 51%;
+    width: 0.75em;
+    height: 0.25em;
+    transform: translate(0.2em, 0) rotate(45deg);
+    transform-origin: 0 50%;
+}
+
+.search-btn span {
+    display: inline-block;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+}
+
+.search-bar input:focus+.search-btn,
+.search-bar input:valid+.search-btn {
+    background: #c7c7c7;
+    border-radius: 0 0.375em 0.375em 0;
+    transform: scale(1);
+}
+
+.search-bar input:focus+.search-btn:before,
+.search-bar input:focus+.search-btn:after,
+.search-bar input:valid+.search-btn:before,
+.search-bar input:valid+.search-btn:after {
+    opacity: 1;
+}
+
+.search-bar input:focus+.search-btn:hover,
+.search-bar input:valid+.search-btn:hover,
+.search-bar input:valid:not(:focus)+.search-btn:focus {
+    background: #848484;
+}
+
+.search-bar input:focus+.search-btn:active,
+.search-bar input:valid+.search-btn:active {
+    transform: translateY(1px);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+
+    input {
+        color: #f1f1f1;
+    }
+
+
+    .search-bar input {
+        box-shadow: 0 0 0 0.4em #f1f1f1 inset;
+    }
+
+    .search-bar input:focus,
+    .search-bar input:valid {
+        background: #6666ff;
+        box-shadow: 0 0 0 0.1em #3d3d3d inset;
+    }
+
+    .search-btn {
+        background: #f1f1f1;
+    }
+}
+
+/*===============*/
+/*=====style=====*/
+.daylight {
+    margin-top: 20px;
+    float: right;
+}
+
+.daylight>ul>li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.daylight>ul>li>a {
+    color: #cdcdcd;
+    background-color: #000000;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 3px;
+    margin: 3px;
+    font-size: 16px;
+}
+
+.daylight>ul>li>a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/*===============*/
+/*=====navbar=====*/
+.navbar {
+    display: flex;
+    justify-content: left;
+}
+
+.navbar>ul>li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 25px;
+    margin: 5px;
+}
+
+.navbar>ul>li>a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    position: relative;
+}
+
+.navbar>ul>li>a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #ffffff;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.navbar>ul>li>a:hover::after,
+a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+}
+
+/*============*/
+/*============================================*/
+/*================upArrow=================*/
+.up-arrow {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+
+/*========================================*/
+/*==================================*/
+.genre {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.conteneur {
+    width: 33.3%;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.wrapper {
+    height: 220px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid #fff;
+}
+
+.wrapper img {
+    max-width: 300px;
+    max-height: 300px;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.wrapper:hover img {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
+
+.conteneur p {
+    text-align: left;
+    margin-top: 10px;
+}
+
+/*=======================================*/
+/*=================Plan===================*/
+.plan {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 20px 0;
+}
+
+.plan h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.plan ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.plan li {
+    font-size: 16px;
+    margin-bottom: 5px;
+    position: relative;
+    padding: 10px 20px;
+    display: flex; /* Ajout de flexbox */
+    align-items: center; /* Centre les éléments enfants verticalement */
+}
+
+.plan li a {
+    color: #7e7e7e;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    margin: 0 auto;
+}
+
+.plan li a:hover {
+    color: #000;
+}
+
+/*========================================*/
+
+/*=================Footer===================*/
+footer {
+    background-color: rgb(54, 131, 3);
+    padding: 20px;
+    font-size: 14px;
+    color: #dbd9d9;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    min-width: fit-content;
+}
+
+.footer-container span {
+    font-size: 20px;
+    margin: 30px 70px;
+    line-height: 1.5;
+}
+
+.footer-container a {
+    color: #dbd9d9;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-container a:hover {
+    color: #5a0101;
+}
+
+
+
+/*=========================================*/
+
+/*=====================MORE================*/
+.more {
+    display: flex;
+    justify-content: center;
+    color: #000066;
+    text-decoration: none;
+    font-size: 26px;
+    margin: 50px;
+    transition: color 0.2s ease-in-out;
+}
+
+.more:hover {
+    color: #1919ff;
+}
+
+/*=========================================*/
+/*================================*/
+.reco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cover {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.reco:hover{
+    transform: scale(1.07);
+}
+
+.listReco {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.listReco img {
+    max-width: 100%;
+    height: auto;
+}
+
+.listReco a {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    transition: color 0.2s ease-in-out;
+}
+
+.listReco a:hover{
+    color: #1919ff;
+    text-decoration: underline;
+}
+
+.recoLec:hover{
+    transform: scale(1.07);
+}
+
+.liR{
+    display: flex;
+    justify-content: center;
+}
+
+.recoLec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.recoLec img{
+    margin-bottom: 10px;
+}
+/*===============================================*/
+
+/*=================CONNEXION===============*/
+
+/* Styles pour le fond orange sur toute la page */
+.background {
+    background-color:  #84a4fc;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles pour le rectangle blanc au milieu de la page */
+.login-box {
+    background-color: rgb(255, 255, 255);
+    padding: 35px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour le logo */
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Styles pour les champs de saisie */
+.input-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"], input[type="date"], input[type="email"]
+, input[type="tel"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #000;
+}
+
+/* Style pour le bouton "Se Connecter" */
+input[type="submit"] {
+    color: black; /* Couleur du texte */
+    background-color: #fff; /* Fond du bouton */
+    border: 1px solid #ccc; /* Bordure du bouton */
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #eee; /* Couleur de fond au survol */
+}
+
+/* Styles pour la barre de saisie de mot de passe */
+.password-input {
+    position: relative;
+}
+
+
+/*===============================================*/
+
